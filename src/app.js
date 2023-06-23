@@ -5,12 +5,11 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import swaggerMiddleware from "./middlewares/middlewares.js";
 import dotenv from "dotenv";
-
+dotenv.config();
 const app = express();
 connect();
 app.use(bodyParser.json());
 app.use(cors());
-dotenv.config();
+
 app.use("/postbase", allData);
-app.use("/", ...swaggerMiddleware());
 app.listen(3000);
