@@ -4,9 +4,6 @@ info:
   description: Multi step form
   version: 0.1.9
 
-servers:
-  - url: HTTP
-    description: local server
 paths:
   /postbase:
     post:
