@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: Mutli step form
+  description: Multi step form
+  version: 0.1.9
+
+servers:
+  - url: HTTP
+    description: local server
+paths:
+  /postbase:
+    post:
+      tags:
+        - Multi step form
+      requestBody:
+        description: post base
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                number:
+                  type: number
+                mode:
+                  type: string
+                Online_service:
+                  type: string
+                Larger_storage:
+                  type: string
+                Customizable_profile:
+                  type: string
+      responses:
+        "200":
+          description: Multi step form data

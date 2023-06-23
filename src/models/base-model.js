@@ -3,31 +3,24 @@ import { Schema, model } from "mongoose";
 const dataBase = new Schema({
   name: {
     type: Schema.Types.String,
-    required: true,
   },
   email: {
     type: Schema.Types.String,
-    required: true,
   },
   number: {
     type: Schema.Types.Number,
-    required: true,
   },
   mode: {
     type: Schema.Types.String,
-    required: true,
   },
-  "Online service": {
+  Online_service: {
     type: Schema.Types.String,
-    required: true,
   },
-  "Larger storage": {
+  Larger_storage: {
     type: Schema.Types.String,
-    required: true,
   },
-  "Customizable profile": {
+  Customizable_profile: {
     type: Schema.Types.String,
-    required: true,
   },
 });
 

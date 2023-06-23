@@ -1,8 +1,15 @@
 import express from "express";
 import connect from "./database/mongo.js";
+import { allData } from "./controllers/base-controller.js";
+import bodyParser from "body-parser";
+import cors from "cors";
+import swaggerMiddleware from "./middlewares/middlewares.js";
 
 const app = express();
 connect();
+app.use(bodyParser.json());
+app.use(cors());
 
-console.log("lado");
+app.use("/postbase", allData);
+app.use("/", ...swaggerMiddleware());
 app.listen(3000);
