@@ -12,4 +12,5 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use("/postbase", allData);
+app.use("/", ...swaggerMiddleware());
 app.listen(3000);
